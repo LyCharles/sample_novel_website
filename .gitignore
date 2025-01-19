@@ -32,3 +32,13 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+*.rb linguist-language=Ruby
+*.rake linguist-language=Ruby
+Gemfile linguist-language=Ruby
+Rakefile linguist-language=Ruby
+
+*.html linguist-vendored
+*.scss linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
