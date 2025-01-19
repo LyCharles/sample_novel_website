@@ -1,0 +1,16 @@
+<div class="novel-detail">
+  <h1><%= @novel.title %></h1>
+  <p><%= t('novels.show.author') %>：<%= @novel.author %></p>
+  <p><%= t('novels.show.category') %>：<%= @novel.category.name %></p>
+  <p><%= t('novels.show.description') %>：<%= @novel.description %></p>
+
+  <h2><%= t('novels.show.chapter_list') %></h2>
+  <div class="chapters">
+    <% @chapters.each do |chapter| %>
+      <div class="chapter-item">
+        <%= link_to t('novels.show.chapter_title', number: chapter.chapter_number, title: chapter.title),
+                    novel_chapter_path(@novel, chapter) %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+ja:
+  site_name: "ライトノベル"
+  nav:
+    home: "ホーム"
+    rankings: "ランキング"
+    categories: "カテゴリー"
+    login: "ログイン"
+    register: "新規登録"
+    logout: "ログアウト"
+  
+  novels:
+    index:
+      featured: "おすすめ小説"
+      no_novels: "現在、小説はありません"
+      read_button: "読む"
+      chapters_count: "%{count} 章"
+      uncategorized: "未分類"
+    show:
+      author: "作者"
+      category: "カテゴリー"
+      description: "あらすじ"
+      chapter_list: "目次"
+      chapter_title: "第%{number}章 %{title}"
+    rankings:
+      title: "小説ランキング"
+      latest: "新着作品"
+      most_viewed: "閲覧数ランキング"
+      most_favorited: "お気に入りランキング"
+      views: "閲覧"
+      favorites: "お気に入り"
+      views_count: "%{count} 閲覧"
+      favorites_count: "%{count} お気に入り"
+  
+  chapters:
+    show:
+      previous: "前の章"
+      next: "次の章"
+      back_to_novel: "目次へ戻る"
+  
+  categories:
+    errors:
+      not_found: "カテゴリーが見つかりません"
+    index:
+      title: "カテゴリー"
+      works_count:
+        zero: "作品なし"
+        one: "1作品"
+        other: "%{count}作品"
+    show:
+      novels_in_category: "%{category}の小説"
+      no_novels: "このカテゴリーには小説がありません"
+  
+  users:
+    new:
+      title: "新規登録"
+      username: "ユーザー名"
+      email: "メールアドレス"
+      password: "パスワード"
+      password_confirmation: "パスワード（確認）"
+      submit: "登録する"
+    create:
+      success: "登録が完了しました！"
+      error: "登録に失敗しました。入力内容をご確認ください"
+  
+  sessions:
+    new:
+      title: "ログイン"
+      email: "メールアドレス"
+      password: "パスワード"
+      submit: "ログイン"
+      register_link: "アカウントをお持ちでない方はこちら"
+    create:
+      success: "ログインしました！"
+      error: "メールアドレスまたはパスワードが正しくありません"
+    destroy:
+      success: "ログアウトしました"
+  
+  footer:
+    about:
+      title: "ライトノベルについて"
+      description: "ライトノベルは無料の小説閲覧プラットフォームです"
+    quick_links: "クイックリンク"
+    contact: "お問い合わせ"
+    about_us: "運営会社"
+    help: "ヘルプ"
+  
+  activerecord:
+    models:
+      novel: "小説"
+      chapter: "章"
+      category: "カテゴリー"
+      user: "ユーザー"
+    attributes:
+      novel:
+        title: "タイトル"
+        author: "作者"
+        description: "あらすじ"
+      chapter:
+        title: "タイトル"
+        content: "本文"
+        chapter_number: "章番号"
+      user:
+        username: "ユーザー名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認）"
+  time:
+    formats:
+      short: "%Y年%m月%d日" 

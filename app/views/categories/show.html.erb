@@ -1,0 +1,34 @@
+<div class="container">
+  <h2 class="section-title">
+    <%= t('categories.show.novels_in_category', category: @category.name) %>
+  </h2>
+
+  <div class="row g-4">
+    <% @novels.each do |novel| %>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="novel-title">
+              <%= link_to novel.title, novel_path(novel), class: 'text-decoration-none text-dark' %>
+            </h5>
+            <div class="novel-author mb-2">
+              <i class="bi bi-person"></i> <%= novel.author %>
+            </div>
+            <p class="novel-desc mb-3">
+              <%= truncate(novel.description, length: 100) %>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">
+                <i class="bi bi-book"></i> 
+                <%= t('novels.index.chapters_count', count: novel.chapters.count) %>
+              </small>
+              <%= link_to t('novels.index.read_button'), 
+                         novel_path(novel), 
+                         class: 'btn btn-read' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> 

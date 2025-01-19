@@ -1,0 +1,35 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to '首页', root_path %></li>
+      <li class="breadcrumb-item"><%= link_to @novel.title, novel_path(@novel) %></li>
+      <li class="breadcrumb-item active"><%= @chapter.title %></li>
+    </ol>
+  </nav>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h1 class="card-title text-center mb-4"><%= @chapter.title %></h1>
+      
+      <div class="chapter-content mb-4">
+        <%= simple_format @chapter.content %>
+      </div>
+
+      <div class="d-flex justify-content-between mt-4">
+        <% if @prev_chapter %>
+          <%= link_to "上一章：#{@prev_chapter.title}", 
+              novel_chapter_path(@novel, @prev_chapter), 
+              class: 'btn btn-outline-primary' %>
+        <% end %>
+
+        <%= link_to '返回目录', novel_path(@novel), class: 'btn btn-secondary' %>
+
+        <% if @next_chapter %>
+          <%= link_to "下一章：#{@next_chapter.title}", 
+              novel_chapter_path(@novel, @next_chapter), 
+              class: 'btn btn-outline-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+zh:
+  site_name: "轻小说"
+  nav:
+    home: "首页"
+    rankings: "排行榜"
+    categories: "分类"
+    login: "登录"
+    register: "注册"
+    logout: "退出"
+  
+  novels:
+    index:
+      featured: "精选小说"
+      no_novels: "暂无小说"
+      read_button: "开始阅读"
+      chapters_count: "%{count} 章节"
+      uncategorized: "未分类"
+    show:
+      author: "作者"
+      category: "分类"
+      description: "简介"
+      chapter_list: "章节列表"
+      chapter_title: "第%{number}章 %{title}"
+    rankings:
+      title: "小说排行榜"
+      latest: "最新上传"
+      most_viewed: "最多阅读"
+      most_favorited: "最多收藏"
+      views: "阅读"
+      favorites: "收藏"
+      views_count: "%{count} 阅读"
+      favorites_count: "%{count} 收藏"
+  
+  chapters:
+    show:
+      previous: "上一章"
+      next: "下一章"
+      back_to_novel: "返回目录"
+  
+  categories:
+    errors:
+      not_found: "找不到该分类"
+    index:
+      title: "小说分类"
+      works_count:
+        zero: "暂无作品"
+        one: "1部作品"
+        other: "%{count}部作品"
+    show:
+      novels_in_category: "%{category}分类下的小说"
+      no_novels: "该分类下暂无小说"
+  
+  users:
+    new:
+      title: "用户注册"
+      username: "用户名"
+      email: "电子邮箱"
+      password: "密码"
+      password_confirmation: "确认密码"
+      submit: "注册"
+    create:
+      success: "注册成功！"
+      error: "注册失败，请检查输入"
+  
+  sessions:
+    new:
+      title: "用户登录"
+      email: "电子邮箱"
+      password: "密码"
+      submit: "登录"
+      register_link: "还没有账号？立即注册"
+    create:
+      success: "登录成功！"
+      error: "登录失败，邮箱或密码错误"
+    destroy:
+      success: "已成功退出"
+  
+  footer:
+    about:
+      title: "关于轻小说"
+      description: "轻小说是一个免费的小说阅读平台"
+    quick_links: "快速链接"
+    contact: "联系我们"
+    about_us: "关于我们"
+    help: "帮助中心"
+  
+  activerecord:
+    models:
+      novel: "小说"
+      chapter: "章节"
+      category: "分类"
+      user: "用户"
+    attributes:
+      novel:
+        title: "标题"
+        author: "作者"
+        description: "简介"
+      chapter:
+        title: "标题"
+        content: "内容"
+        chapter_number: "章节号"
+      user:
+        username: "用户名"
+        email: "电子邮箱"
+        password: "密码"
+        password_confirmation: "确认密码"
+  time:
+    formats:
+      short: "%Y-%m-%d" 

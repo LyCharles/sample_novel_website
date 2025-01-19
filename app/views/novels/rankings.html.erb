@@ -1,0 +1,62 @@
+<div class="container">
+  <h2 class="section-title"><%= t('novels.rankings.title') %></h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3 class="h5 mb-0"><%= t('novels.rankings.latest') %></h3>
+        </div>
+        <div class="card-body">
+          <% @latest_novels.each_with_index do |novel, index| %>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2"><%= index + 1 %></span>
+              <%= link_to novel.title, novel_path(novel), class: 'text-decoration-none' %>
+              <small class="ms-auto text-muted">
+                <%= l(novel.created_at, format: :short) %>
+              </small>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3 class="h5 mb-0"><%= t('novels.rankings.most_viewed') %></h3>
+        </div>
+        <div class="card-body">
+          <% @most_viewed.each_with_index do |novel, index| %>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2"><%= index + 1 %></span>
+              <%= link_to novel.title, novel_path(novel), class: 'text-decoration-none' %>
+              <small class="ms-auto text-muted">
+                <%= t('novels.rankings.views_count', count: novel.views || 0) %>
+              </small>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3 class="h5 mb-0"><%= t('novels.rankings.most_favorited') %></h3>
+        </div>
+        <div class="card-body">
+          <% @most_favorited.each_with_index do |novel, index| %>
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2"><%= index + 1 %></span>
+              <%= link_to novel.title, novel_path(novel), class: 'text-decoration-none' %>
+              <small class="ms-auto text-muted">
+                <%= t('novels.rankings.favorites_count', count: novel.favorites_count || 0) %>
+              </small>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
